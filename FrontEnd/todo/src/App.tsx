@@ -32,7 +32,7 @@ function App() {
     try {
       const todo = await todoService.createTodo({
         title: newTodo,
-        isCompleted: false,
+        isComplete: false,
       });
       setTodos([...todos, todo]);
       setNewTodo("");
@@ -45,7 +45,7 @@ function App() {
     if (!todo.id) return;
 
     try {
-      const updated = { ...todo, isCompleted: !todo.isCompleted };
+      const updated = { ...todo, isComplete: !todo.isComplete };
       await todoService.updateTodo(todo.id, updated);
       // Map through the existing todos and replace the updated one with the new data
       setTodos(todos.map((todo) => (todo.id === updated.id ? updated : todo)));
@@ -85,12 +85,12 @@ function App() {
               <li key={todo.id}>
                 <input
                   type="checkbox"
-                  checked={todo.isCompleted}
+                  checked={todo.isComplete}
                   onChange={() => handleToggle(todo)}
                 />
                 <span
                   style={{
-                    textDecoration: todo.isCompleted ? "line-through" : "none",
+                    textDecoration: todo.isComplete ? "line-through" : "none",
                   }}
                 >
                   {todo.title}
