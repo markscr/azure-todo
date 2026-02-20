@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+# Visual Studio auto-generated files
+.vscode/
+.vs/
+bin/
+obj/
+*.user
+*.sln.iml
+out/
+packages/
+.nuget/
+*.DotSettings
+*.DotSettings.user

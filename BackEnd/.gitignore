@@ -25,3 +25,14 @@ dist-ssr
 
 # Ignore Visual Studio workspace and user files
 .vs/
+# .NET/Visual Studio auto-generated files
+bin/
+obj/
+*.user
+*.sln.iml
+out/
+.vscode
+packages/
+.nuget/
+*.DotSettings
+*.DotSettings.user
